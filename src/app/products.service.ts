@@ -1,5 +1,8 @@
+
 import { Injectable } from '@angular/core';
-import {of}
+import {Observable, of} from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+
 
 const products =  [
   {
@@ -37,11 +40,13 @@ const products =  [
 })
 export class ProductsService {
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
   
-  getCheapest(){
-    return products
-    
+ getProduct(): Observable<any> {
+    const url = 'https://fakestoreapi.com/products';
+    return this.http.get(url);
   }
 }

@@ -1,5 +1,51 @@
-#main_container
+*
 {
-    margin: 30px;
-    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
 }
+#nav1
+{
+    font-family: 'Times New Roman', Times, serif; 
+   
+}
+
+#nav2
+{
+    font-family: 'Times New Roman', Times, serif; 
+}
+
+
+
+.actions, .categories
+{
+    padding: 5px;
+}
+
+.icon {
+    
+    vertical-align: middle;
+    width: 50%;
+}
+
+a{
+    width: 100%;
+    color: black;
+}
+
+a:hover{
+    color: black;
+}
+
+.categories-link:hover
+{
+    background-color: lightgray;
+    
+}
+
+#upload_link, #login_link{
+    display: inline-flex;
+}
+
+
+
+

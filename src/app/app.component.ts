@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-root',
@@ -8,11 +9,14 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent implements OnInit {
   title = 'hackaton';
+ 
   observable = new Observable<string>(observer => {
     observer.next('Start Processing...');
     setTimeout(() => observer.next('Still Processing...'), 3000);
     setTimeout(() => observer.complete(), 5000);
   });
+
+  
 
   ngOnInit() {
     this.observable.subscribe({
@@ -21,5 +25,7 @@ export class AppComponent implements OnInit {
       complete: () => console.log('Process Completed!'),
     });
     console.log('COMPONENT INITIALIZED')
+
+
   }
 }

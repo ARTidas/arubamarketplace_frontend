@@ -5,7 +5,7 @@ import { ProductsService } from '../products.service';
 
 @Component({
   selector: 'app-product-list',
-  templateUrl: './product-list.component.html', // Ellenőrizd az elérési utat
+  templateUrl: './product-list.component.html', 
   styleUrls: ['./product-list.component.css']
 })
 
@@ -17,7 +17,7 @@ export class ProductListComponent implements OnInit {
     private productsService: ProductsService
   ) {}
 
-  products: { id: number; name: string; price: number; description: string; }[] = [];
+  products: any = [];
 
   ngOnInit(): void {
     this.loadProducts();
@@ -25,7 +25,10 @@ export class ProductListComponent implements OnInit {
   }
 
   loadProducts() {
-    this.products = this.productsService.getCheapest();
+    this.productsService.getProduct()
+    .subscribe(
+      data=> this.products = data
+    )
   }
  
   
