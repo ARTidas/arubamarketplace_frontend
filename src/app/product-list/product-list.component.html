@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>Termékek Listája</h2>
+    <div class="row">
+        <div class="col-lg-3" *ngFor="let product of products">
+            <div class="card">
+              <img class="card-img-top pictures" [src]="'/assets/picture' + product.id + '.png'" alt="Kép">
+              <div class="card-body">
+                <h4 class="card-title">{{ product.name }}</h4>
+                <p class="card-text">Ár: {{ product.price | currency }}</p>
+                <p class="card-text">Leírás: {{ product.description }}</p>
+                <button class="btn btn-primary" >Details</button>
+              </div>  
+            </div>
+    </div>
+  </div>
+</div>
