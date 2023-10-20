@@ -26,6 +26,10 @@ flex: 1 0 20em;
     overflow: hidden;
 }
 
+.card:hover{
+    box-shadow: 5px 5px #5d4037;
+}
+
 .card-title{
     font-size: 18px;
     display: -webkit-box;
@@ -42,8 +46,9 @@ flex: 1 0 20em;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
-
-
+.card_page{
+    text-decoration: none;
+}
 
 .btn
 {

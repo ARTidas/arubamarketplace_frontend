@@ -1,15 +1,17 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-3" *ngFor="let product of products">
-            <div class="card">
+          <a class="card_page"  href="#">
+            <div class="card"> 
               <img class="card-img-top pictures " [src]="product.image" alt="Kép">
               <div class="card-body">
                 <h4 class="card-title">{{ product.title }}</h4>
                 <p class="card-text"><b>Price:</b> {{ product.price | currency }}</p>
                 <p class="card-text description"><b>Description:</b> {{ product.description }}</p>
-                <button class="btn" >Details</button>
-              </div>  
+              </div> 
+            
             </div>
+          </a> 
     </div>
   </div>
 </div>

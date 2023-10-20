@@ -46,6 +46,33 @@ a:hover{
     display: inline-flex;
 }
 
+.categories-link{
+    border: 2px solid white;
+    border-radius: 25px;
+    
+}
+
+ #search_bar {
+    padding: 5px;
+
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    width: 100%;
+    display: inline-flex;
+  }
+  #search{
+    border: 2px solid lightgray;
+    border-radius: 25px;
+  }
+  #search_icon
+  {
+    cursor: pointer;
+    width: 50%;
+    vertical-align: middle;
+  }
+  
+
 
 
 
