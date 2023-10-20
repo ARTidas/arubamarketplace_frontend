@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {ProductsService} from './products.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 
@@ -19,6 +20,7 @@ import { MatIconModule } from '@angular/material/icon';
   declarations: [
     AppComponent,
     ProductListComponent,
+    NavbarComponent,
    
 
   ],

@@ -1,0 +1,73 @@
+*
+{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#nav1
+{
+    font-family: 'Times New Roman', Times, serif; 
+   
+}
+
+#nav2
+{
+    font-family: 'Times New Roman', Times, serif; 
+}
+
+
+
+.actions, .categories
+{
+    padding: 5px;
+}
+
+.icon {
+    
+    vertical-align: middle;
+    width: 50%;
+}
+
+a{
+    width: 100%;
+    color: black;
+}
+
+a:hover{
+    color: black;
+}
+
+.categories-link:hover
+{
+    background-color: lightgray;
+    
+}
+
+#upload_link, #login_link{
+    display: inline-flex;
+}
+
+.categories-link{
+    border: 2px solid white;
+    border-radius: 25px;
+    
+}
+
+ #search_bar {
+    padding: 5px;
+
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+    width: 100%;
+    display: inline-flex;
+  }
+  #search{
+    border: 2px solid lightgray;
+    border-radius: 25px;
+  }
+  #search_icon
+  {
+    cursor: pointer;
+    width: 50%;
+    vertical-align: middle;
+  }
