@@ -8,6 +8,12 @@ import {ProductsService} from './products.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { NavbarComponent } from './navbar/navbar.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+import { LoginModalContentComponent } from './login-modal-content/login-modal-content.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
 
 
 
@@ -21,6 +27,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppComponent,
     ProductListComponent,
     NavbarComponent,
+    LoginModalContentComponent,
+
+   
    
 
   ],
@@ -30,9 +39,16 @@ import { NavbarComponent } from './navbar/navbar.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MatIconModule,
-    
+    NgbModule,
+    ReactiveFormsModule,
   ],
-  providers: [ProductsService],
+  providers: [ProductsService,NgbCarouselConfig],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(config: NgbCarouselConfig) {
+    config.interval = 2000; // Automatikus váltás időzítése (opcionális)
+    config.wrap = true;     // Automatikus újrakezdés a végéről (opcionális)
+    config.keyboard = true; // Navigáció a nyilak segítségével (opcionális)
+  }
+ }

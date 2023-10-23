@@ -1,5 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { Observable } from 'rxjs';
+import { NgbCarouselConfig, NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent implements OnInit {
   title = 'hackaton';
- 
+
   observable = new Observable<string>(observer => {
     observer.next('Start Processing...');
     setTimeout(() => observer.next('Still Processing...'), 3000);

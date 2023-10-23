@@ -1,0 +1,26 @@
+<div #content>
+    <div class="modal-header">
+      <h4 class="modal-title">Login</h4>
+      <button type="button" class="close" (click)="modal.dismiss('Cross click')">
+        <span>&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="email">E-mail address</label>
+          <input type="email" id="email" formControlName="email" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" formControlName="password" class="form-control" required>
+        </div>
+       
+      </form>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Login</button>
+        <button type="submit" class="btn btn-secondary">Register</button>
+    </div>
+  </div>
+  

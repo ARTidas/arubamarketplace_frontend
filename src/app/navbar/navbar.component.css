@@ -22,8 +22,8 @@
 }
 
 .icon {
-    
     vertical-align: middle;
+
     width: 50%;
 }
 
@@ -61,13 +61,20 @@ a:hover{
     width: 100%;
     display: inline-flex;
   }
+
   #search{
     border: 2px solid lightgray;
     border-radius: 25px;
   }
+
   #search_icon
   {
     cursor: pointer;
     width: 50%;
     vertical-align: middle;
+  }
+
+  #log-btn 
+  {
+    color: black;
   }
