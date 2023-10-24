@@ -14,10 +14,13 @@ export class ProductListComponent implements OnInit {
   
 
   constructor(
+
     private productsService: ProductsService
   ) {}
 
   products: any = [];
+
+  products_by_category: any = [];
 
   ngOnInit(): void {
     this.loadProducts();
@@ -30,6 +33,7 @@ export class ProductListComponent implements OnInit {
       data=> this.products = data
     )
   }
+
  
   
 }

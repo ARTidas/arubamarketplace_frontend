@@ -40,6 +40,8 @@ const products =  [
 })
 export class ProductsService {
 
+  private apiUrl = 'https://fakestoreapi.com/products'
+
   constructor(
     private http: HttpClient
   ) { }
@@ -49,4 +51,11 @@ export class ProductsService {
     const url = 'https://fakestoreapi.com/products';
     return this.http.get(url);
   }
+
+  getById(id: number): Observable<any> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get(url);
+  }
+
 }
+

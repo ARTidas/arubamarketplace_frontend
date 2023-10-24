@@ -2,19 +2,30 @@
 {
     padding-left: 10px;
     padding-right: 10px;
+    
 }
 #nav1
 {
-    font-family: 'Times New Roman', Times, serif; 
-   
+    font-family: 'Source Sans 3', sans-serif;
+    position: relative;
+    text-align: center;
+    font-weight: bolder;
 }
 
 #nav2
 {
-    font-family: 'Times New Roman', Times, serif; 
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: bolder;
 }
 
-
+#company_name
+{
+    position: absolute;
+    text-align: left;
+    top: 25%;
+    right: 83.5%;
+    
+}
 
 .actions, .categories
 {
@@ -23,7 +34,6 @@
 
 .icon {
     vertical-align: middle;
-
     width: 50%;
 }
 
@@ -53,18 +63,21 @@ a:hover{
 }
 
  #search_bar {
-    padding: 5px;
-
-    margin-top: 8px;
-    margin-right: 16px;
+    vertical-align: middle;
     font-size: 17px;
     width: 100%;
-    display: inline-flex;
+    width: 500px;
+   
   }
 
   #search{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border: 2px solid lightgray;
     border-radius: 25px;
+    width: 50%;
   }
 
   #search_icon

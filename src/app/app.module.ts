@@ -12,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { LoginModalContentComponent } from './login-modal-content/login-modal-content.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProductPageComponent } from './product-page/product-page.component';
 
 
 
@@ -28,6 +29,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProductListComponent,
     NavbarComponent,
     LoginModalContentComponent,
+    ProductPageComponent,
 
    
    
