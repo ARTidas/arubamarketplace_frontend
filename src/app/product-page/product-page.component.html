@@ -1,5 +1,7 @@
+
 <div *ngIf="product">
-    <img [src]="product.image" alt="">
+  <a routerLink="/products">All products</a> <span> > {{product.title}}</span>
+    <img [src]="product.image" alt="{{product.title}} image">
     <h1>{{ product.title }}</h1>
     <p><strong>Ár:</strong> {{ product.price | currency }}</p>
     <p><strong>Leírás:</strong> {{ product.description }}</p>

@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { Observable } from 'rxjs';
-import { NgbCarouselConfig, NgbCarousel } from '@ng-bootstrap/ng-bootstrap';
+
 
 
 @Component({
