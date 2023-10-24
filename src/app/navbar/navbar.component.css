@@ -16,6 +16,8 @@
 {
     font-family: 'Source Sans 3', sans-serif;
     font-weight: bolder;
+    margin-top: 10px;
+    
 }
 
 #company_name
@@ -90,4 +92,9 @@ a:hover{
   #log-btn 
   {
     color: black;
+  }
+
+  .categories
+  {
+    padding: 10px;
   }

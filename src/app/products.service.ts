@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import {Observable, of} from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
-
 const products =  [
   {
     id: 1,
