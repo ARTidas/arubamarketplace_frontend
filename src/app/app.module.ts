@@ -15,6 +15,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { HomeComponent } from './home/home.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 
 
@@ -33,6 +34,7 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
     LoginModalContentComponent,
     ProductPageComponent,
     HomeComponent,
+    ShoppingCartComponent,
   ],
   imports: [
     BrowserModule,

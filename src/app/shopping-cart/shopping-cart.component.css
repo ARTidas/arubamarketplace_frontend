@@ -1,0 +1,25 @@
+h2 {
+    color: #007bff;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  input {
+    padding: 5px;
+  }
+  
