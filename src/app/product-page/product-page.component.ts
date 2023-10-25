@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductsService } from '../products.service';
 
@@ -7,12 +7,19 @@ import { ProductsService } from '../products.service';
   templateUrl: './product-page.component.html',
   styleUrls: ['./product-page.component.css']
 })
+
+
+
 export class ProductPageComponent implements OnInit {
+
   product: any;
+  isDescriptionVisible: boolean = false;
+  isIconExpanded: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
-    private productService: ProductsService
+    private productService: ProductsService,
+    
   ) {
     this.route.params.subscribe(params => {
       const id = +params['id'];
@@ -20,6 +27,8 @@ export class ProductPageComponent implements OnInit {
     });
   }
 
+  
+ 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       const id = +params['id'];
@@ -31,4 +40,11 @@ export class ProductPageComponent implements OnInit {
       }
     });
   }
+
+  toggleDescription() {
+    this.isDescriptionVisible = !this.isDescriptionVisible;
+    this.isIconExpanded = !this.isIconExpanded;
+  }
+  
 }
+

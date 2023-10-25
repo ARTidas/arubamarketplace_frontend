@@ -8,8 +8,9 @@ import { LoginModalContentComponent } from '../login-modal-content/login-modal-c
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  
   constructor(private modalService: NgbModal) {}
-
+  
   openLoginModal() {
     const modalRef = this.modalService.open(LoginModalContentComponent);
     modalRef.result.then(

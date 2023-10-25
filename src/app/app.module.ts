@@ -14,6 +14,7 @@ import { LoginModalContentComponent } from './login-modal-content/login-modal-co
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { HomeComponent } from './home/home.component';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 
 
@@ -32,10 +33,6 @@ import { HomeComponent } from './home/home.component';
     LoginModalContentComponent,
     ProductPageComponent,
     HomeComponent,
-
-   
-   
-
   ],
   imports: [
     BrowserModule,
@@ -45,6 +42,7 @@ import { HomeComponent } from './home/home.component';
     MatIconModule,
     NgbModule,
     ReactiveFormsModule,
+    MatSlideToggleModule,
   ],
   providers: [ProductsService,NgbCarouselConfig],
   bootstrap: [AppComponent]

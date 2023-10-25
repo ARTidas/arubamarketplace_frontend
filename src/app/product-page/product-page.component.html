@@ -20,14 +20,18 @@
     <div class="info">
       <p>Product details</p> 
       <div class="arrow">
-        <a><mat-icon class="icon arrow">chevron_right</mat-icon></a>
+        <mat-icon class="icon arrow" (click)="toggleDescription()">{{ isIconExpanded ? 'expand_more' : 'chevron_right' }}</mat-icon>
       </div>
+      
+    </div>
+    <div id="desc" [style.display]="isDescriptionVisible ? 'block' : 'none'">
+      <p >{{product.description}}</p>
     </div>
     <hr>
     <div class="info">
       <p>Reviews</p>
       <div class="arrow">
-        <a><mat-icon class="icon arrow">chevron_right</mat-icon></a>
+        <a><mat-icon class="icon arrow" >chevron_right</mat-icon></a>
       </div>
     </div>
     <hr>

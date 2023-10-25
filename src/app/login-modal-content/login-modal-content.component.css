@@ -1,0 +1,89 @@
+.modal-header
+{
+    display: block;
+    background-color: #ebebeb;
+    font-family: 'Source Sans 3', sans-serif;
+}
+#header-title 
+{
+    vertical-align: middle;
+    text-align: center;
+}
+
+h4
+{
+    margin-top: 10px;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.inp_label
+{
+    
+    font-size: 14px;
+    padding-bottom: 8px;
+}
+
+
+.form-group
+{
+    padding: 10px;
+}
+
+#alt_sentence
+{
+    font-size: 16px;
+    color: #7a7a7a;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.modal-body
+{
+    font-family: 'Source Sans 3', sans-serif;
+}
+
+.modal-footer
+{
+    font-family: 'Source Sans 3', sans-serif;
+    display: block;
+    text-align: center;
+}
+
+input
+{
+    border: 2px solid #d6d6d6;
+}
+
+
+
+.login-btn
+{
+    margin-left: 10px;
+    background-color: #444444;
+    width: 96%;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.reg-btn
+{
+    background-color: white;
+    color: #444444;
+    width: 96%;
+    border: 2px solid #444444;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+a{
+    
+    color: #444444;
+    font-size: 12px;
+}
+
+#toggle
+{
+  vertical-align: center;
+}

@@ -109,5 +109,17 @@ button
     text-align: right;
     position: absolute;
     left: 62%;
+    display: inline-block;
 }
 
+#desc
+{
+    font-size: 16px;
+    display: none;
+    
+}
+
+#arr1
+{
+    
+}
