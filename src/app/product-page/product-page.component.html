@@ -1,9 +1,35 @@
 
-<div *ngIf="product">
-  <a routerLink="/products">All products</a> <span> > {{product.title}}</span>
-    <img [src]="product.image" alt="{{product.title}} image">
-    <h1>{{ product.title }}</h1>
-    <p><strong>Ár:</strong> {{ product.price | currency }}</p>
-    <p><strong>Leírás:</strong> {{ product.description }}</p>
-    <!-- Egyéb termék adatai -->
+<div *ngIf="product" id="container">
+  <span><a routerLink="/products">All products</a> > {{product.title}}</span>
+  <div id="main">
+    <div id="img_container">
+      <img id="product_img" [src]="product.image" alt="{{product.title}} image">
+    </div>
+    <div id="detail_container">
+      <h1>{{ product.title }}</h1>
+      <p id="short_desc">{{ product.description }}</p>
+      <p id="currency">{{ product.price | currency }}</p>
+      <div id="btn_container">
+        <button><mat-icon class="icon">shopping_cart</mat-icon>ADD TO CART</button>
+      </div>
+    </div>
+  </div>
+    <br>
+  <div id="info_container">
+    <hr>
+    <div class="info">
+      <p>Product details</p> 
+      <div class="arrow">
+        <a><mat-icon class="icon arrow">chevron_right</mat-icon></a>
+      </div>
+    </div>
+    <hr>
+    <div class="info">
+      <p>Reviews</p>
+      <div class="arrow">
+        <a><mat-icon class="icon arrow">chevron_right</mat-icon></a>
+      </div>
+    </div>
+    <hr>
+  </div>
   </div>
