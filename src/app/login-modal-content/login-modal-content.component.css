@@ -85,5 +85,9 @@ a{
 
 #toggle
 {
-  vertical-align: center;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    vertical-align: center;
+    display: flex;
+    flex-wrap: wrap;
 }
