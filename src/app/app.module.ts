@@ -27,6 +27,7 @@ import { HelloComponent } from './hello/hello.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,6 +38,7 @@ import { HelloComponent } from './hello/hello.component';
     HomeComponent,
     ShoppingCartComponent,
     HelloComponent,
+
   ],
   imports: [
     BrowserModule,

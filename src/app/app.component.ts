@@ -26,7 +26,5 @@ export class AppComponent implements OnInit {
       complete: () => console.log('Process Completed!'),
     });
     console.log('COMPONENT INITIALIZED')
-
-
   }
 }

@@ -66,6 +66,7 @@
 {
   display: flex;
   flex-wrap: wrap;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 .top p
@@ -75,6 +76,7 @@
 
 #total
 {
+  font-family: 'Source Sans 3', sans-serif;
   display: flex;
   flex-wrap: wrap;
   font-size: 1.5em;
@@ -84,6 +86,7 @@
 
 .btn
 {
+  font-family: 'Source Sans 3', sans-serif;
   border-radius: 5px;
   background-color: #444444;
   color: #f7f6f6;

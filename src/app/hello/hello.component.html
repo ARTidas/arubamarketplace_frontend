@@ -1,8 +1,16 @@
 <div id="container">
-<div *ngIf="typingText" id="typing-text">{{ typingText }}</div>
-
-<div id="btn-container">
-<button id="home-button" routerLink="/home">Go to home page</button>
-</div>
-
-</div>
+    <div *ngIf="typingText" id="typing-text" >{{ typingText }}</div>
+  
+    <div id="decisions">
+      <ul class="decisions-list">
+        <li *ngFor="let decision of decisions" class="list-item">
+            <a (click)="loadNextNode(decision.children_id)">{{ decision.decision }}</a>
+        </li>
+      </ul>
+    </div>
+  
+    <div id="btn-container">
+      <button id="home-button" routerLink="/home">Go to home page</button>
+    </div>
+  </div>
+  

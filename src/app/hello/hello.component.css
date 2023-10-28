@@ -33,3 +33,30 @@
 {
     text-align: center;
 }
+
+#decisions
+{
+    text-align: center;
+}
+
+.decisions-list
+{
+    list-style-type: none;
+    font-family: 'Courier New', monospace;
+    font-size: 2em;
+    text-align: center;
+}
+
+.list-item
+{
+    width: 70%;
+    border-bottom: 2px solid #444444;
+    line-height: 2em;
+    margin-left: 15%;
+    border-radius: 5px;
+}
+
+.list-item:hover
+{
+    background-color: lightgray;
+}
