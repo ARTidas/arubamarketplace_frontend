@@ -15,6 +15,6 @@ export class RegistrationService {
    
     console.log(formData)
     // Az űrlap adatait elküldjük a szervernek
-    return this.http.post('http://localhost:8080/api/register', formData);
+    return this.http.post('http://localhost:80/api/register', formData);
   }
 }

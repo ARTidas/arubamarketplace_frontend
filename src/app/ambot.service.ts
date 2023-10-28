@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AmbotService {
 
-  private apiUrl = 'http://localhost:8080/api/hello'
+  private apiUrl = 'http://localhost:80/api/hello'
 
 
   constructor(

@@ -76,3 +76,7 @@ h3
 .card_page{
     text-decoration: none;
 }
+
+.card:hover{
+    box-shadow: 5px 5px #444444;
+}

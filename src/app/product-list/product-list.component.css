@@ -28,7 +28,7 @@ flex: 1 0 20em;
 }
 
 .card:hover{
-    box-shadow: 5px 5px #5d4037;
+    box-shadow: 5px 5px #444444;
 }
 
 .card-title{
