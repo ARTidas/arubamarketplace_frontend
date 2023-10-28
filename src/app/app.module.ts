@@ -19,7 +19,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { HelloComponent } from './hello/hello.component';
 import { RegisterModalComponent } from './register-modal/register-modal.component';
 import { CategoryPageComponent } from './category-page/category-page.component';
-
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -53,6 +53,7 @@ import { CategoryPageComponent } from './category-page/category-page.component';
     NgbModule,
     ReactiveFormsModule,
     MatSlideToggleModule,
+    FormsModule,
   ],
   providers: [ProductsService,NgbCarouselConfig],
   bootstrap: [AppComponent]

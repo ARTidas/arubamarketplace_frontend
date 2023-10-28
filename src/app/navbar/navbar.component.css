@@ -72,22 +72,41 @@ a:hover{
 }
 
  #search_bar {
-    vertical-align: middle;
-    font-size: 17px;
-    width: 100%;
-    width: 500px;
+    position: relative;
   }
 
   #search{
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -10%);
     border: 2px solid lightgray;
     border-radius: 25px;
     width: 50%;
     height: 50px;
   }
+
+  .search-results {
+    position: absolute;
+    width: 50%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 150px; /* Szükség esetén állítsd be a maximális magasságot */
+    overflow-y: auto;
+    z-index: 1;
+    margin-top: 2%;
+    margin-left: 24%;
+  }
+  
+  .search-results li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .search-results li:last-child {
+    border-bottom: none;
+  }
+
 
   #search_icon
   {

@@ -37,5 +37,13 @@ export class ProductsService {
     const url = `${this.apiUrl}/${category}`;
     return this.http.get(url);
   }
+
+  getProductByName(name: string): Observable<any>
+  {
+    const url = `${this.apiUrl}/${name}`;
+    return this.http.get(url);
+  }
+
 }
 
+ 
