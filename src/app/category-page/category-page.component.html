@@ -1,5 +1,29 @@
-<p>work</p>
-
-<div *ngFor="let product of products">
-    <button>{{product.category}}</button>
+<h3>Products by category</h3>
+<div id="container">
+    
+    <ul>
+    <li id="btn-con" *ngFor="let category of categories">
+      <button class="categories" (click)="selectCategory(category.category)">{{ category.category }}</button><br>
+    </li>
+    </ul>
+    
+    <div id="product-con">
+        <div class="row">
+            <div class="col-lg-3" *ngFor="let product of categoryItems">
+                <a class="card_page"  routerLink="/products/{{product.id}}">
+                    <div class="card"> 
+                        <img class="card-img-top pictures " [src]="product.img" alt="Kép">
+                        <div class="card-body">
+                            <h4 class="card-title">{{ product.title }}</h4>
+                            <p class="card-text"><b>Price:</b> {{ product.price | currency }}</p>
+                            <p class="card-text description"><b>Description:</b> {{ product.description }}</p>
+                            <p class="card-text description"><b>Category:</b> {{ product.category }}</p>
+                        </div> 
+                        
+                    </div>
+                </a> 
+            </div>
+        </div>
+    </div>
 </div>
+  

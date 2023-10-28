@@ -26,5 +26,16 @@ export class ProductsService {
     return this.http.get(url);
   }
 
+  getCategory():Observable<any>
+  {
+    const url = "http://localhost:8080/api/products/categories"
+    return this.http.get(url);
+  }
+
+  getCategoryItem(category: string):Observable<any>
+  {
+    const url = `${this.apiUrl}/${category}`;
+    return this.http.get(url);
+  }
 }
 

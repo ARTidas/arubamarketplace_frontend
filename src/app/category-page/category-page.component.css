@@ -1,0 +1,78 @@
+#container
+{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+#btn-con
+{
+    font-size: 1.5em;
+    width: 100%;
+    color: black;
+    text-align: center;
+    list-style-type: none;
+    font-family: 'Courier New', monospace;
+    border-bottom: 2px solid #444444;
+    border-radius: 5px;
+    line-height: 1.2em;
+}
+
+.categories
+{
+    background-color: white;
+   font-weight: bold;
+    margin-top: 3%;
+    padding-right: 10%;
+    width: 100%;
+    border-radius: 5px;
+    border: 0px solid white;
+}
+
+.categories:hover
+{
+    background-color: lightgray;
+}
+
+#product-con
+{
+    width: 50%;
+    padding: 2%;
+}
+
+h3
+{
+    color: #444444;
+    font-size: 3em;
+    margin-left: 5%;
+    text-align: center;
+}
+
+.pictures
+{
+    width: 50%;
+    height: 50%;
+    align-self: center;
+
+}
+
+.card-title{
+    font-size: 18px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.description
+{
+    text-align: justify;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.card_page{
+    text-decoration: none;
+}

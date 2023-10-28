@@ -1,29 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../products.service';
+
 @Component({
   selector: 'app-category-page',
   templateUrl: './category-page.component.html',
   styleUrls: ['./category-page.component.css']
 })
 export class CategoryPageComponent implements OnInit {
-  constructor(
+  constructor(private productsService: ProductsService) {}
 
-    private productsService: ProductsService
-  ) {}
-
-  products: any = [];
-
-  products_by_category: any = [];
+  categories: any = [];
+  selectedCategory: string = '';
+  categoryItems: any[] = []; // Tárold itt a kategóriához tartozó elemeket
 
   ngOnInit(): void {
     this.loadProducts();
-    
   }
 
   loadProducts() {
-    this.productsService.getProduct()
+    this.productsService.getCategory()
     .subscribe(
-      data=> this.products = data
-    )
+      data => this.categories = data
+    );
+  }
+
+  selectCategory(category: string) {
+    this.selectedCategory = category;
+    this.productsService.getCategoryItem(category)
+      .subscribe(data => {
+        this.categoryItems = data; // Tárold a kategóriához tartozó elemeket
+      });
   }
 }
