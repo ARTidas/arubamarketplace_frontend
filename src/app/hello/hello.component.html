@@ -1,10 +1,14 @@
 <div id="container">
+    <div id="alt_con">
+        <div id="amadeo_con">
+            <img id="amadeo" src="./assets/amedeo_gif.gif" alt="">
+        </div>
     <div *ngIf="typingText" id="typing-text" >{{ typingText }}</div>
-  
+  </div>
     <div id="decisions">
       <ul class="decisions-list">
         <li *ngFor="let decision of decisions" class="list-item">
-            <a (click)="loadNextNode(decision.children_id)">{{ decision.decision }}</a>
+            <button (click)="loadNextNode(decision.children_id)" class="btn">{{ decision.decision }}</button>
         </li>
       </ul>
     </div>
