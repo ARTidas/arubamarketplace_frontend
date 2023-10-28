@@ -3,14 +3,14 @@
   <span><a routerLink="/products">All products</a> > {{product.title}}</span>
   <div id="main">
     <div id="img_container">
-      <img id="product_img" [src]="product.image" alt="{{product.title}} image">
+      <img id="product_img" [src]="product.img" alt="{{product.title}} image">
     </div>
     <div id="detail_container">
       <h1>{{ product.title }}</h1>
       <p id="short_desc">{{ product.description }}</p>
       <p id="currency">{{ product.price | currency }}</p>
       <div id="btn_container">
-        <button><mat-icon class="icon">shopping_cart</mat-icon>ADD TO CART</button>
+        <button (click)="addToCart()"><mat-icon class="icon">shopping_cart</mat-icon>ADD TO CART</button>
       </div>
     </div>
   </div>

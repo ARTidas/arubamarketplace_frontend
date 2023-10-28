@@ -16,6 +16,7 @@ import { ProductPageComponent } from './product-page/product-page.component';
 import { HomeComponent } from './home/home.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { HelloComponent } from './hello/hello.component';
 
 
 
@@ -35,6 +36,7 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     ProductPageComponent,
     HomeComponent,
     ShoppingCartComponent,
+    HelloComponent,
   ],
   imports: [
     BrowserModule,

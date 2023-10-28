@@ -1,15 +1,41 @@
-
-<div>
-    <h2>Shopping Cart</h2>
-    <ul>
-      <li *ngFor="let item of cartItems; let i = index">
-        {{ item }}
-        <button (click)="removeItem(i)">Remove</button>
-      </li>
-    </ul>
-    <div>
-      <input #newItem (keyup.enter)="addItem(newItem.value); newItem.value = ''" placeholder="Add item">
-      <button (click)="addItem(newItem.value); newItem.value = ''">Add to Cart</button>
-    </div>
+<div class="container">
+<div class="cart">
+    <h2>Your Shopping Cart</h2>
+        <div class="cart-item" *ngFor="let item of cartItems">
+          <img [src]="item.img" alt="{{ item.title }}" />
+          <div class="item-details" style="width: 70%;">
+              <h3>{{ item.title }}</h3>
+              <p style=
+              "width: 70%; display: -webkit-box;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+              overflow: hidden; ">
+              {{item.description}}
+              </p>
+          </div>
+          <div class="right-side">
+            <button (click)="removeFromCart(item)"><mat-icon>delete</mat-icon></button>
+            <p> ${{ item.price }}</p>
+          </div>
+          
+        </div>
   </div>
-  
+  <div class="summary" >
+    <h2>Summary</h2>
+      <div class="summary-container" >
+        <div class="top" style="padding-right: 10%;">
+          <p>Items in the Cart</p>
+          <p id="price">${{ calculateTotalPrice() }}</p>
+        </div>
+        <hr>
+        <div class="bottom">
+          <div id="total">
+            <p style="padding-right: 30%;">Total</p>
+            <p >${{ calculateTotalPrice() }}</p>
+          </div>
+          <br>
+          <button class="btn">Go to checkout</button>
+        </div>
+      </div>
+  </div>
+</div>

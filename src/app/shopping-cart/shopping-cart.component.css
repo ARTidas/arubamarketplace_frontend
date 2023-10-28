@@ -1,25 +1,95 @@
-h2 {
-    color: #007bff;
+.container
+{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.cart
+{
+    /*border: 2px solid black;*/
+    text-align: left; /* Szöveg középre igazítása */
+    margin: auto; /* Középre igazítás vízszintesen */
+    padding: 3%; 
+    width: 70%;
+}
+
+.cart-item {
+    display: flex; /* Flex dobozok használata */
+    border-bottom: 2px solid #444444;;
+    width: 100%;
   }
   
-  ul {
-    list-style-type: none;
-    padding: 0;
+.cart-item img {
+    max-width: 10%; 
+    margin-right: 2%;
   }
-  
-  li {
-    margin-bottom: 10px;
-  }
-  
-  button {
-    background-color: #ff5733;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  
-  input {
-    padding: 5px;
-  }
-  
+
+.cart-item h3
+{
+  font-weight: bold;
+  font-size: 16px;
+  color: #444444;
+}
+
+.right-side button
+{
+ background-color: #f7f6f6;
+ border: 2px solid #f7f6f6;
+ color: #444444;
+}
+
+.right-side p
+{
+  font-size: 20px;
+  color: #444444;
+  padding-top: 30%;
+}
+
+.right-side
+{
+  padding-left: 20%;
+  text-align: right;
+}
+
+.summary
+{
+  /*border: 2px solid black;*/
+  text-align: left; /* Szöveg középre igazítása */
+  margin: auto; /* Középre igazítás vízszintesen */
+  padding: 3%;
+  width: 30%;
+}
+
+
+
+.top
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.top p
+{
+  padding: 3%;
+}
+
+#total
+{
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #444444;
+}
+
+.btn
+{
+  border-radius: 5px;
+  background-color: #444444;
+  color: #f7f6f6;
+  width: 100%;
+  font-size: 1.2em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  padding: 3%;
+}

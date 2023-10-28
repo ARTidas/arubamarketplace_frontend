@@ -1,13 +1,11 @@
 #container 
 {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    transform: translate(15%, 2%);
     text-align: left;
-    top: 65%;
-    margin-top: 50px;
     font-family: 'Source Sans 3', sans-serif;
     width: 1066px;
+    align-self: center;
 }
 
 #container a
@@ -116,10 +114,5 @@ button
 {
     font-size: 16px;
     display: none;
-    
-}
-
-#arr1
-{
     
 }

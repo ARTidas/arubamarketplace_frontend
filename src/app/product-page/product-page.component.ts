@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductsService } from '../products.service';
+import { ShoppingCartService } from '../shopping-cart.service';
 
 @Component({
   selector: 'app-product-page',
@@ -13,12 +14,14 @@ import { ProductsService } from '../products.service';
 export class ProductPageComponent implements OnInit {
 
   product: any;
+
   isDescriptionVisible: boolean = false;
   isIconExpanded: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
     private productService: ProductsService,
+    private shoppingCartService: ShoppingCartService,
     
   ) {
     this.route.params.subscribe(params => {
@@ -46,5 +49,10 @@ export class ProductPageComponent implements OnInit {
     this.isIconExpanded = !this.isIconExpanded;
   }
   
+  addToCart() {
+    // Kosárba helyezzük a terméket
+    this.shoppingCartService.addToCart(this.product);
+  }
+
 }
 
