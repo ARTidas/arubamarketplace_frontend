@@ -1,0 +1,35 @@
+<div #content>
+    <div class="modal-header">
+      <div id="header-title">
+        <h4 class="modal-title" >Register</h4>
+      </div>
+      <p id="alt_sentence">Register by entering your email address and password twice.</p>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          
+          <label for="email" class="inp_label">E-mail address</label>
+          <input type="email" id="email" formControlName="email" class="form-control" placeholder="goldenfive@kubernet.com"  required> 
+          
+        </div>
+        <div class="form-group">
+            <label for="password" class="inp_label">Password</label>
+            <input type="password" id="password" formControlName="password" class="form-control" placeholder="********" required>
+          </div>
+          <div class="form-group">
+              <label for="passwordAgain" class="inp_label">Password again</label>
+              <input type="password" id="passwordAgain" formControlName="passwordConfirmation" class="form-control" placeholder="********" required>
+          </div>
+          
+        
+      </form>
+      
+    </div>
+    <div class="modal-footer">
+        <div id="login-btn-cont">
+            <button type="submit" class="btn login-btn" (click)="onSubmit()">Register</button>
+          </div>
+    </div>
+  </div>
+  

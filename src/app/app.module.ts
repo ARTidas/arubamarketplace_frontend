@@ -17,6 +17,8 @@ import { HomeComponent } from './home/home.component';
 import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { HelloComponent } from './hello/hello.component';
+import { RegisterModalComponent } from './register-modal/register-modal.component';
+import { CategoryPageComponent } from './category-page/category-page.component';
 
 
 
@@ -38,6 +40,8 @@ import { HelloComponent } from './hello/hello.component';
     HomeComponent,
     ShoppingCartComponent,
     HelloComponent,
+    RegisterModalComponent,
+    CategoryPageComponent,
 
   ],
   imports: [
