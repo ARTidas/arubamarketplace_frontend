@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbActiveModal, NgbModal  } from '@ng-bootstrap/ng-bootstrap';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { Authentication } from '../authentication.service'; // Importáljuk az Authentication szolgáltatást
 import { RegisterModalComponent } from '../register-modal/register-modal.component';
 
 @Component({
@@ -13,8 +13,11 @@ export class LoginModalContentComponent {
   loginForm: FormGroup;
 
   constructor(
-    private modalService: NgbModal,
-    public modal: NgbActiveModal, private formBuilder: FormBuilder) {
+    public modal: NgbActiveModal,
+    private formBuilder: FormBuilder,
+    private authService: Authentication ,
+    private modalService: NgbModal // Injektáljuk az Authentication szolgáltatást
+  ) {
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required]]
@@ -23,18 +26,25 @@ export class LoginModalContentComponent {
 
   onSubmit() {
     if (this.loginForm.valid) {
-      // Itt kezeld a bejelentkezést
-      // Példa: console.log(this.loginForm.value);
-      this.modal.close('Save click');
+      const { email, password } = this.loginForm.value;
+      this.authService.login(email, password).subscribe(
+        () => {
+          // A bejelentkezés sikeres volt, itt kezeld a bejelentkezést
+          this.modal.close('Save click');
+        },
+        (error) => {
+          // A bejelentkezés sikertelen, itt kezeld a hibát (például, hibaüzenet megjelenítése)
+          console.error(error);
+        }
+      );
     }
   }
-
-  openLoginModal() {
+  openRegisterModal() {
     const modalRef = this.modalService.open(RegisterModalComponent);
     modalRef.result.then(
       (result) => {
         if (result === 'Save click') {
-          // A bejelentkezés sikeres volt, itt kezeld a bejelentkezést
+          // A regisztráció sikeres volt, itt kezeld a regisztrációt
         }
       },
       (reason) => {

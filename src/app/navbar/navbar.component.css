@@ -13,18 +13,19 @@
 }
 #nav1
 {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'Courier New', monospace;
     position: relative;
     text-align: center;
     font-weight: bolder;
+    font-size: 1.2em;
 }
 
 #nav2
 {
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'Courier New', monospace;
     font-weight: bolder;
     margin-top: 10px;
-    
+    font-size: 1.2em;
 }
 
 #company_name
@@ -43,7 +44,7 @@
 
 .icon {
     vertical-align: middle;
-    width: 50%;
+    width: 40%;
 }
 
 a{
@@ -68,6 +69,7 @@ a:hover{
 .categories-link{
     border: 2px solid white;
     border-radius: 25px;
+    
     
 }
 
@@ -123,4 +125,5 @@ a:hover{
   .categories
   {
     padding: 10px;
+    font-family: 'Courier New', monospace;
   }

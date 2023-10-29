@@ -1,8 +1,9 @@
+// register-modal.component.ts
+
 import { Component } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RegistrationService } from '../registration.service';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-register-modal',
@@ -10,33 +11,33 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./register-modal.component.css']
 })
 export class RegisterModalComponent {
-  registerForm: any = [];
+  registerForm: FormGroup;
+  email: string = ''; // Az email értékét a regisztrációs komponenstől kapjuk meg
 
   constructor(
-    private modalService: NgbModal,
-    public modal: NgbActiveModal,
+    private modal: NgbActiveModal,
     private formBuilder: FormBuilder,
-    private registrationService: RegistrationService // Injektáld be a RegistrationService-t
+    private registrationService: RegistrationService
   ) {
     this.registerForm = this.formBuilder.group({
-      email: [''],
-      password: [''],
-      passwordConfirmation: ['']
+      email: [this.email],
+      password: ['', Validators.required],
+      passwordConfirmation: ['', Validators.required]
     });
-    
   }
 
-  onSubmit() {
-    
-      const formData = this.registerForm.value;
-      console.log(formData)
-      this.registrationService.registerUser(formData).subscribe(response => {
-        // Kezeld a szerver válaszát itt
-        console.log('Sikeres regisztráció', response);
-      }, error => {
-        console.error('Hiba történt a regisztráció során', error);
-      });
-     
+  register() {
+    if (this.registerForm.valid) {
+      const { email, password, passwordConfirmation } = this.registerForm.value;
+      this.registrationService.register(email, password).subscribe(
+        () => {
+          this.modal.close('success'); // Sikeres regisztráció esetén zárjuk be a modalt
+        },
+        (error) => {
+          console.error(error);
+          this.modal.close('error'); // Hiba esetén zárjuk be a modalt
+        }
+      );
     }
   }
-
+}

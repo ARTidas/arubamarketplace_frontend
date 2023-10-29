@@ -30,6 +30,8 @@ import { FormsModule } from '@angular/forms';
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +43,8 @@ import { FormsModule } from '@angular/forms';
     ShoppingCartComponent,
     HelloComponent,
     RegisterModalComponent,
-    CategoryPageComponent,
+    CategoryPageComponent
+
 
   ],
   imports: [

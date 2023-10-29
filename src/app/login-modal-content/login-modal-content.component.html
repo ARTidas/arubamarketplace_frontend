@@ -1,35 +1,30 @@
 <div #content>
-    <div class="modal-header">
-      <div id="header-title">
-        <h4 class="modal-title" >Log in</h4>
-      </div>
-      <p id="alt_sentence">Log in by entering your email address and password.</p>
+  <div class="modal-header">
+    <div id="header-title">
+      <h4 class="modal-title">Log in</h4>
     </div>
-    <div class="modal-body">
-      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-        <div class="form-group">
-          
-          <label for="email" class="inp_label">E-mail address</label>
-          <input type="email" id="email" formControlName="email" class="form-control" placeholder="goldenfive@kubernet.com" required> 
-          
-        </div>
-        <div class="form-group">
-          <label for="password" class="inp_label">Password</label>
-          <input type="password" id="password" formControlName="password" class="form-control" placeholder="********" required>
-          <a href="">Forgot password?</a>
-        </div>
-        <div id="toggle">
-          <mat-slide-toggle class="custom-slide-toggle"></mat-slide-toggle><p style="color: #444444; font-size: 16px;">Remember me!</p>
-        </div>
-        <div id="login-btn-cont">
-          <button type="submit" class="btn login-btn">Log in</button>
-        </div>
-      </form>
-      
-    </div>
-    <div class="modal-footer">
-      
-        <button type="submit" class="btn reg-btn" (click)="openLoginModal()">New Account</button>
-    </div>
+    <p id="alt_sentence">Log in by entering your email address and password.</p>
   </div>
-  
+  <div class="modal-body">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="email" class="inp_label">E-mail address</label>
+        <input type="email" id="email" formControlName="email" class="form-control" placeholder="goldenfive@kubernet.com" required> 
+      </div>
+      <div class="form-group">
+        <label for="password" class="inp_label">Password</label>
+        <input type="password" id="password" formControlName="password" class="form-control" placeholder="********" required>
+        <a href="">Forgot password?</a>
+      </div>
+      <div id="toggle">
+        <mat-slide-toggle class="custom-slide-toggle"></mat-slide-toggle><p style="color: #444444; font-size: 16px;">Remember me!</p>
+      </div>
+      <div id="login-btn-cont">
+        <button type="submit" class="btn login-btn">Log in</button>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+      <button type="button" class="btn reg-btn" (click)="openRegisterModal()">New Account</button>
+  </div>
+</div>

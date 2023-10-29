@@ -11,7 +11,7 @@ import { ProductsService } from '../products.service';
 export class NavbarComponent {
   searchQuery: string = '';
   searchResults: string[] = []; // Most már a típus string[]
-
+  searchId: number[] = [];
   showResults: boolean = false;
 
   constructor(private modalService: NgbModal, private productService: ProductsService) {}
@@ -21,16 +21,20 @@ export class NavbarComponent {
       this.productService.getProductByName(this.searchQuery).subscribe(
         (result) => {
           console.log(result);
-          this.searchResults = [result]; // Most minden találat külön objektumként van a tömbben
+          this.searchResults = [result.productTitles];
+          this.searchId = [result.productIds]
+          // Most minden találat külön objektumként van a tömbben
           this.showResults = true;
         },
         (error) => {
           console.error('Hiba történt a keresés során:', error);
+          this.searchId =[];
           this.searchResults = [];
           this.showResults = false;
         }
       );
     } else {
+      this.searchId =[];
       this.searchResults = [];
       this.showResults = false;
     }

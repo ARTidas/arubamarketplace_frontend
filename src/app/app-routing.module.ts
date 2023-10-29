@@ -17,7 +17,7 @@ const routes: Routes = [
   {path: 'shopping-cart', component: ShoppingCartComponent},
   {path: 'hello/:id', component: HelloComponent},
   {path: 'category', component: CategoryPageComponent},
-  
+ 
 
 
  ];
