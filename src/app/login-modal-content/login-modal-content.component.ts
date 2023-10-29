@@ -31,6 +31,8 @@ export class LoginModalContentComponent {
         () => {
           // A bejelentkezés sikeres volt, itt kezeld a bejelentkezést
           this.modal.close('Save click');
+         
+          
         },
         (error) => {
           // A bejelentkezés sikertelen, itt kezeld a hibát (például, hibaüzenet megjelenítése)

@@ -43,7 +43,8 @@ import { FormsModule } from '@angular/forms';
     ShoppingCartComponent,
     HelloComponent,
     RegisterModalComponent,
-    CategoryPageComponent
+    CategoryPageComponent,
+    
 
 
   ],

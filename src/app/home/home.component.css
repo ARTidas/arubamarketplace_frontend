@@ -21,7 +21,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'Courier New', monospace;
 }
 
 #alt_btn1
@@ -40,7 +40,7 @@
 .alt_btn
 {
     border: 2px solid #444444;
-    font-weight: 600;
+    font-weight: bold;
     border-radius: 5px;
     margin: 5px;
     height: 48px;
@@ -54,7 +54,7 @@
     top: 57%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'Courier New', monospace;
     font-size: 16px;
     font-weight: bold;
 }
