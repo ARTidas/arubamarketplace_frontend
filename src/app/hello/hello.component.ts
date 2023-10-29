@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AmbotService } from '../ambot.service';
 import { ElementRef, ViewChild } from '@angular/core';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+
 
 @Component({
   selector: 'app-hello',
@@ -13,6 +13,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 export class HelloComponent implements OnInit {
   @ViewChild('typingText', { static: true }) typingTextElement!: ElementRef;
 
+  
   answer: any;
   apiData: any;
   index = 0;
@@ -46,6 +47,7 @@ export class HelloComponent implements OnInit {
     this.typingText = newTextInput;
   }
   
+  
 
   loadNextNode(childrenId: number) {
     this.router.navigate(['hello', childrenId]);
@@ -62,6 +64,7 @@ export class HelloComponent implements OnInit {
   
     // Töltsd be az új adatokat
     this.loadTextForId(childrenId);
+    
   }
   
 

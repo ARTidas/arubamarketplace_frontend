@@ -25,6 +25,7 @@ flex: 1 0 20em;
     height: 100%;
     width: 270px;
     overflow: hidden;
+    font-family: 'Courier New', monospace;
 }
 
 .card:hover{
@@ -37,10 +38,13 @@ flex: 1 0 20em;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
 }
 
 .description
 {
+    font-family: 'Courier New', monospace;
     text-align: justify;
     display: -webkit-box;
     -webkit-line-clamp: 3;
@@ -53,6 +57,7 @@ flex: 1 0 20em;
 
 .card_con
 {
+    font-family: 'Courier New', monospace;
     margin-bottom: 1%;
 }
 

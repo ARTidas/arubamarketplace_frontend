@@ -1,6 +1,6 @@
 <div class="container">
 <div class="cart">
-    <h2>Your Shopping Cart</h2>
+    <h2 style="font-family: 'Courier New', monospace; font-weight: bold; font-size: 2em;">Your Shopping Cart</h2>
         <div class="cart-item" *ngFor="let item of cartItems">
           <img [src]="item.img" alt="{{ item.title }}" />
           <div class="item-details" style="width: 70%;">
@@ -21,7 +21,7 @@
         </div>
   </div>
   <div class="summary" >
-    <h2>Summary</h2>
+    <h2 style="font-family: 'Courier New', monospace; font-weight: bold;">Summary</h2>
       <div class="summary-container" >
         <div class="top" style="padding-right: 10%;">
           <p>Items in the Cart</p>

@@ -34,6 +34,8 @@
 #btn-container
 {
     text-align: center;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
 }
 
 #decisions

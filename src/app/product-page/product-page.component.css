@@ -3,7 +3,7 @@
     position: relative;
     transform: translate(15%, 2%);
     text-align: left;
-    font-family: 'Source Sans 3', sans-serif;
+    font-family: 'Courier New', monospace;
     width: 1066px;
     align-self: center;
 }

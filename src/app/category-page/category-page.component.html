@@ -1,4 +1,4 @@
-<h3>Products by category</h3>
+<h3 style="font-family: 'Courier New', monospace;">Products by category</h3>
 <div id="container">
     
     <ul>
@@ -14,7 +14,7 @@
                     <div class="card"> 
                         <img class="card-img-top pictures " [src]="product.img" alt="Kép">
                         <div class="card-body">
-                            <h4 class="card-title">{{ product.title }}</h4>
+                            <h4 class="card-title" style="font-family: 'Courier New', monospace; font-weight: bold;">{{ product.title }}</h4>
                             <p class="card-text"><b>Price:</b> {{ product.price | currency }}</p>
                             <p class="card-text description"><b>Description:</b> {{ product.description }}</p>
                             <p class="card-text description"><b>Category:</b> {{ product.category }}</p>

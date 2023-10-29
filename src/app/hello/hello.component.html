@@ -8,13 +8,14 @@
     <div id="decisions">
       <ul class="decisions-list">
         <li *ngFor="let decision of decisions" class="list-item">
-            <button (click)="loadNextNode(decision.children_id)" class="btn">{{ decision.decision }}</button>
+          
+            <button  (click)="loadNextNode(decision.children_id)" [routerLink]="decision.decision === 'Continue to the website' ? '/home' : null" class="btn">{{ decision.decision }}</button>
         </li>
       </ul>
     </div>
   
-    <div id="btn-container">
-      <button id="home-button" routerLink="/home">Go to home page</button>
+    <div id="btn-container" >
+      <button id="home-button" routerLink="/home" >Go to home page</button>
     </div>
   </div>
   
